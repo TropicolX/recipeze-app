@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap');
+
+:root {
+    --primary-color: orange;
+    --secondary-color: #1c3fa8;
+    --bg-color: rgba(0, 0, 0, 0.521);
+}
+
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+body {
+    background-color: rgb(26, 26, 27);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+
+.container {
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    position: absolute;
+    z-index: 10000;
+}
+
+nav i {
+    background: rgba(0, 0, 0, 0.521);
+    border-left: none;
+    border-radius: 50px;
+    padding: 2px 5px 5px 0;
+    color: orange;
+}
+
+.brand {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+.showcase {
+    height: 100vh;
+    background: url(../img/food.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.showcase .container.heading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase h1 {
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+}
+
+.showcase h1 i {
+    background: rgba(0, 0, 0, 0.521);
+    border-radius: 50px;
+    padding: 5px 5px 5px 5px;
+    color: orange;
+}
+
+.showcase p {
+    padding-top: 25px;
+    color: whitesmoke;
+    font-size: 28px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.content {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form .input {
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    color: whitesmoke;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+form .btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+h1#query {
+    font-size: 30px;
+    margin: 0 auto;
+    width: auto;
+    text-decoration: underline orange solid;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.search-result {
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.no-result {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.item {
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(37, 37, 37);
+    padding: 15px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;   
+}
+
+.item .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .title {
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 70%;
+}
+
+.view-button {
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    padding: 10px 0;
+    background-color: #404041;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    align-self: flex-start;
+    border-radius: 4px;
+}
+
+.item-data {
+    color: whitesmoke;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+}
+
+.container.initial .brand {
+    font-size: 7rem;
+}
+
+.container.initial form {
+    max-width: 800px;
+}
+
+.container.initial form input {
+    padding: 5px;
+    font-size: 3rem;
+}
+
+.container.initial form i {
+    width: 10%;
+    color: rgb(75, 75, 75);
+    font-size: 2rem;
+    margin: -8px;
+}
+
+/* Tablets and under */
+@media screen and (max-width: 768px) {
+    .search-result  {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+    .showcase h1 {
+        font-size: 45px;
+    }
+    .search-result  {
+        grid-template-columns: 1fr;
+    }
+}
