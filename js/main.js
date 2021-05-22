@@ -1,9 +1,11 @@
+// AOS Instance
+AOS.init();
+
+// Variables
 const searchForm = document.querySelector('form');
-const searchIcon = document.getElementById('search');
 let contentSection = document.getElementsByTagName('section')[1];
 let searchResultDiv = document.querySelector('.search-result');
-let h1 = document.getElementById('query');
-const container = document.querySelector('.container');
+let container = document.querySelector('.showcase .container');
 let searchQuery = '';
 const APP_ID = 'ef4c255e';
 const APP_KEY = '74812718514a53e6b5bfb8df7b147fff';
@@ -19,11 +21,10 @@ async function fetchAPI () {
     const response = await fetch(baseURL);
     const data = await response.json();
     generateHTML(data.hits);
-    console.log(data);
+    // console.log(data);
 }
 
 function generateHTML(results) {
-    container.classList.remove('initial');
     contentSection.classList.add('content');
     let generatedHTML = '';
     results.map(result => {
@@ -43,12 +44,12 @@ function generateHTML(results) {
     })
     let sectionHTML = (results.length > 0) ?
     `
-    <div class="container initial">
-        <h1 id="query">${searchQuery.toUpperCase()}</h1>
+    <div class="container">
+        <h1 class="query">${searchQuery.toUpperCase()}</h1>
         <div class="search-result">
         ${generatedHTML}
         </div>
     </div>
-    `: "<h1 class='no-result'>Sorry, we couldn't find any result that matched your search</h1>"
+    `: "<h1 class='no-result' data-aos='fade-up' data-aos-duration='1000'>Sorry, we couldn't find any result that matched your search</h1>"
     contentSection.innerHTML = sectionHTML;
 }

@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: orange;
-    --secondary-color: #1c3fa8;
+    --secondary-color: #1a1a1b;
     --bg-color: rgba(0, 0, 0, 0.521);
 }
 
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    background-color: rgb(26, 26, 27);
+    background-color: var(--secondary-color);
 }
 
 .btn {
@@ -71,6 +71,7 @@ nav i {
     background-size: cover;
     color: white;
     position: relative;
+    overflow-x: hidden;
 }
 
 .showcase .container.heading {
@@ -91,7 +92,7 @@ nav i {
     background: rgba(0, 0, 0, 0.521);
     border-radius: 50px;
     padding: 5px 5px 5px 5px;
-    color: orange;
+    color: #ffa500;
 }
 
 .showcase p {
@@ -138,10 +139,16 @@ form .btn {
     color: whitesmoke;
     font-size: 20px;
     font-weight: 400;
+    border: 1px orange solid;
     transition: all 0.2s ease-in-out;
 }
 
-h1#query {
+form .btn:hover {
+    border: 1px orange solid;
+    background: transparent;
+}
+
+h1.query {
     font-size: 30px;
     margin: 0 auto;
     width: auto;
@@ -162,6 +169,7 @@ h1#query {
     color: white;
     text-align: center;
     font-size: 40px;
+    padding: 10px;
 }
 
 .item {
@@ -193,16 +201,24 @@ h1#query {
 }
 
 .view-button {
+    background-color: rgba(0, 0, 0, 0.363);
     text-decoration: none;
     text-align: center;
     width: 130px;
     padding: 10px 0;
-    background-color: #404041;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
     color: white;
     font-size: 1.4rem;
     margin-top: 20px;
     align-self: flex-start;
     border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.view-button:hover {
+    background-color: #ffa500;
 }
 
 .item-data {
@@ -214,25 +230,6 @@ h1#query {
     line-height: 2rem;
 }
 
-.container.initial .brand {
-    font-size: 7rem;
-}
-
-.container.initial form {
-    max-width: 800px;
-}
-
-.container.initial form input {
-    padding: 5px;
-    font-size: 3rem;
-}
-
-.container.initial form i {
-    width: 10%;
-    color: rgb(75, 75, 75);
-    font-size: 2rem;
-    margin: -8px;
-}
 
 /* Tablets and under */
 @media screen and (max-width: 768px) {
@@ -248,5 +245,11 @@ h1#query {
     }
     .search-result  {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .showcase {
+        height: 120vh;
     }
 }

@@ -4,29 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipeze. | Food recipe generator</title>
+    <title>Recipeze. | Food recipe app</title>
+
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- AOS library -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
         <div class="container">
             <h1 class="brand">Recipe<i>ze.</i></h1>
         </div>
     </nav>
+
+    <!-- Showcase -->
     <section class="showcase">
         <div class="container heading">
-            <h1>Looking for a Delicious <i>Recipe</i>?</h1>
-            <p>Enter a meal and get your recipe in seconds.</p>
+            <h1 data-aos="fade-right" data-aos-duration="1000">Looking for a Delicious <i>Recipe</i>?</h1>
+            <p data-aos="fade-left" data-aos-duration="1000">Enter a meal and get your recipe in seconds.</p>
             <form>
-                <input type="text" class="input" placeholder="What do you wanna eat?...">
-                <input type="submit" value="Get recipe" class="btn btn-primary">
+                <input type="text" class="input" placeholder="What do you wanna eat?..." data-aos="zoom-in-right" data-aos-duration="1000">
+                <input type="submit" value="Get recipe" class="btn btn-primary" data-aos="zoom-in-left" data-aos-duration="1000">
             </form>
         </div>
     </section>
+
+    <!-- Search content -->
     <section class="">
-        
     </section>
+
+    <!-- AOS js library -->
+    <script src="./js/aos.js"></script>
+
+    <!-- Custom Javascript -->
     <script src="./js/main.js"></script>
 </body>
 </html>
